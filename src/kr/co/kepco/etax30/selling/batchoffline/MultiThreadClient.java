@@ -138,7 +138,22 @@ public class MultiThreadClient extends Thread
 			e.printStackTrace();
 		}
 	}
-	
+
+//	static Connection con;
+//
+//	static {
+//		Connection con = null;
+//		try {
+//			con = new Dbcon().getConnection();
+//			//con = new Dbcon().getConnection(DbConRecursiveCallCnt, DbConErrorRetryInterval);
+//		} catch (SQLException e1) {
+//			e1.printStackTrace();
+//			CommUtil.logWriter(e1.toString(),4);
+//			System.exit(-1);
+//		}
+//	}
+
+
 	//
 	public MultiThreadClient(String[] cert) {
      try{
@@ -157,13 +172,15 @@ public class MultiThreadClient extends Thread
 		long starttime = System.currentTimeMillis();
 		Connection con = null;
 		try {
-			con = new Dbcon().getConnection();
+			con = Dbcon.getConnection();
 			//con = new Dbcon().getConnection(DbConRecursiveCallCnt, DbConErrorRetryInterval);
 		} catch (SQLException e1) {
 			e1.printStackTrace();
     		CommUtil.logWriter(e1.toString(),4);
 			System.exit(-1);
-		} 
+		}
+
+
 
 		TaxXmlService txs = null;
 

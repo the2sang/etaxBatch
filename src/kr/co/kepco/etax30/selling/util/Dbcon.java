@@ -29,7 +29,7 @@ public class Dbcon {
 	
 	//int local_i = 0;
 	
-	public Connection getConnection() throws SQLException{
+	public static Connection getConnection() throws SQLException{
 
 		Connection  conn    = null;
 		try{
