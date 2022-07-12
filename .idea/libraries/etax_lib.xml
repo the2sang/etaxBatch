@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="etax-lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/backport-util-concurrent.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ldapjdk.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/libgpkiapi_jni.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/secu.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sggpki.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sgkm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sgsecukit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/signgate_common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/signgateCrypto.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/soap.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xalan.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xercesImpl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xmlParserAPIs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xmlsecurity.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
