@@ -5,13 +5,10 @@ import java.sql.Connection;
 import java.util.Iterator;
 import java.util.List;
 
+import kr.co.kepco.etax30.selling.util.*;
 import signgate.xml.util.XmlSignature;
 import signgate.xml.util.XmlUtil;
 
-import kr.co.kepco.etax30.selling.util.CommProperties;
-import kr.co.kepco.etax30.selling.util.CommTaxMapper;
-import kr.co.kepco.etax30.selling.util.CommTaxXmlSpec;
-import kr.co.kepco.etax30.selling.util.CommUtil;
 //import kr.co.kepco.etax30.selling.util.Dbcon;
 import kr.co.kepco.etax30.selling.vo.ItemListVo;
 import kr.co.kepco.etax30.selling.vo.TbBatchErrHistVo;
@@ -196,11 +193,9 @@ public class TaxCreateXml {
 				//20160407 변경후						
 				//결제방법을 추가
 				//commonInfo = payInfo.toString();
-				
-				
-				
-				
-				System.out.println("test  test : rowId :  : "+CommUtil.getKST("yyyy-MM-dd HH:mm:ss.SSS")+"\n");
+
+
+				System.out.println("create XML File:" +now_grp_no + "\n");
 				
 				//해당 세금계산서의 상품 목록을 가져옴
 				tbTradeItemList = txs.getTbTradeItemList(rowId, con);
@@ -259,6 +254,9 @@ public class TaxCreateXml {
 //				}
 //				CommUtil.logWriter(issueId+" 전자서명끝",0);
 				XmlUtil.genFileCreate(FILEPATH+"/"+targetMonth+now_grp_no+"/"+issueId+".xml", commonInfo, "UTF-8");
+
+				// 새로운 파일 쓰기 성능 테스트 (2022.07.13 - 강희철)
+//				EtaxUtil.genFileCreate3(FILEPATH+"/"+targetMonth+now_grp_no+"/"+issueId+".xml", commonInfo, "UTF-8");
 
 				//XML 테이블에 INSERT, STATUS 01 완료, STATUS 05 INSERT 
 				//UPDATE ELECTRONIC_REPORT_YN = Y, STATUS= 05

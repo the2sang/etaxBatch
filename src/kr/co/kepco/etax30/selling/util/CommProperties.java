@@ -91,7 +91,6 @@ public class CommProperties extends Properties
     
     /**
      * 설  명 : key에 해당되는 value를 int값으로 얻기 위한 것
-     * @param   value를 얻기 위한 key
      * @return  value       int형
      * @pre (key != null), "key cannot be null"
      */
@@ -104,7 +103,6 @@ public class CommProperties extends Properties
 
     /**
      * 설  명 : key에 해당되는 value를 string값으로 얻기 위한 것
-     * @param   value를 얻기 위한 key
      * @return  value       int형
      * @pre (key != null), "key cannot be null"
      */ 
@@ -119,7 +117,6 @@ public class CommProperties extends Properties
      * 주  의 : 해당 정보에 대한 저장은 hashtable의 put method에 해당
      *          setObject() method에 의한 value를 위하여 사용
      * 사용법 : Integer a = (Integer)CommProperties.getObject("Type");
-     * @param   value를 얻기 위한 key
      * @return  value       Object형 받을때 casting
      * @pre (key != null), "key cannot be null"
      */
@@ -217,8 +214,8 @@ public class CommProperties extends Properties
         
 		try {
 			//File f = new File(CommProperties.class.getResource(CONFIG_FILE).getPath());
-			//File f = new File("/data5/ebxml/kepcobill2/kepcobill2/WEB-INF/batch/ap.property");
-			File f = new File("J:/ap.property");
+			File f = new File("/data5/ebxml/kepcobill2/kepcobill2/WEB-INF/batch/ap.property");
+			//File f = new File("J:/ap.property");
 			//System.out.println(CommProperties.class.getResource(CONFIG_FILE).getPath());
 			in = new FileInputStream(f);
 		}
