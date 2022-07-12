@@ -16,12 +16,16 @@ public class Dbcon {
 	final static String DRIVER = CommProperties.getString("DB_DRIVER");
 	final static String URL    = CommProperties.getString("DB_URL");
 	final static String USER   = CommProperties.getString("DB_USER");
-	final static String PASS   = CommCipher.StringDecipher(CommProperties.getString("DB_PASS"));
+	//final static String PASS   = CommCipher.StringDecipher(CommProperties.getString("DB_PASS"));  // 운영반영시 해제
+	final static String PASS   = CommProperties.getString("DB_PASS");  //테스트용
+
 
 	final static String DRIVER_OFF = CommProperties.getString("DB_DRIVER_OFF");
 	final static String URL_OFF    = CommProperties.getString("DB_URL_OFF");
 	final static String USER_OFF   = CommProperties.getString("DB_USER_OFF");
-	final static String PASS_OFF   = CommCipher.StringDecipher(CommProperties.getString("DB_PASS_OFF"));
+
+	//final static String PASS_OFF   = CommCipher.StringDecipher(CommProperties.getString("DB_PASS_OFF")); //운영반영시 해제
+	final static String PASS_OFF   = CommProperties.getString("DB_PASS_OFF"); //테스트용
 	
 	//int local_i = 0;
 	

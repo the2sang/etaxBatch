@@ -194,7 +194,6 @@ public class CommProperties extends Properties
      * 지정된 위치(/{WEB-ROOT}/WEB-INF/classes)의 properties파일을 읽어 key에 대한 value리턴
      *
      * </PRE>
-     * @param   String Key
      * @return  String Value         
      */
     public static String getString(String key)
@@ -218,8 +217,8 @@ public class CommProperties extends Properties
         
 		try {
 			//File f = new File(CommProperties.class.getResource(CONFIG_FILE).getPath());
-			File f = new File("/data5/ebxml/kepcobill2/kepcobill2/WEB-INF/batch/ap.property");
-			//File f = new File("C:/ap.property");
+			//File f = new File("/data5/ebxml/kepcobill2/kepcobill2/WEB-INF/batch/ap.property");
+			File f = new File("J:/ap.property");
 			//System.out.println(CommProperties.class.getResource(CONFIG_FILE).getPath());
 			in = new FileInputStream(f);
 		}
